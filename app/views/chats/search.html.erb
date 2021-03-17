@@ -1,0 +1,14 @@
+ 
+    <div class="side-bar-search">
+    <h2>Search Result</h2>
+
+        <ul class="talk-room-search">
+          <%@chat_partners.each do |chat_partner|%>
+              <%if  @chats.ids.include?(chat_partner.id) %>
+                <%=link_to "/chats/#{chat_partner.id}" do%>
+                <li class="talk-room-search-one"><i class="fas fa-comments">　</i><%= "#{chat_partner.nickname}" %></li>
+              <% end %>
+            <% end %>
+          <%end%>
+        </ul>
+    </div>

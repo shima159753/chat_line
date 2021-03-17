@@ -1,0 +1,5 @@
+          <%@chat_partners.each do |chat_partner|%>
+           <%=link_to "/chats/#{chat_partner.id}" do%>
+           <p class="talk-room-one"><i class="fas fa-comments">　</i><%= "#{chat_partner.nickname}" %></p>
+           <% end %>
+          <%end%>

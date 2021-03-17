@@ -1,0 +1,35 @@
+.side-bar-search{
+  background-color: rgb(80, 22, 22);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.side-bar-search h2{
+color: white;
+text-align: center;
+font-size: 5vw;
+}
+
+.talk-room-search{
+  padding: 3vw;
+  padding-top: 0.5vh;
+  color: white;
+  font-size: 2vw;
+  width: 100vw;
+  display: flex;
+}
+
+.talk-room-search li{
+ width: 20vw;
+ margin: 2vw;
+ margin: 2vh;
+}
+
+.talk-room-search-one{
+  margin-top: 2vh;
+  padding: 1vh;
+  padding-left: 2vw;
+  color: rgb(87, 85, 85);
+  background-color: rgb(248, 244, 244);
+  }

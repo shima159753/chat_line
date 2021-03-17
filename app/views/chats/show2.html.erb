@@ -1,0 +1,20 @@
+      <%= month_calendar do |date| %>
+        <%= link_to time_show_chat_path(@partner.id,date),class:"date-one" do %>
+
+          <% @chats.each do |chat|%>
+ 
+
+                <% if chat.created_at.day == date.day %>
+                  <% if chat.created_at.day.count > 1 %>
+                    <div class="calender-one"><%= date.day %></div>
+                  <% else %>
+                    <div><%= date.day %></div>
+                  <% end %>
+
+               <% end %>
+
+
+          <% end %>
+
+        <% end %>
+      <% end %>

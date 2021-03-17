@@ -1,4 +1,4 @@
- <div class="box-wrapper">
+<div class="box-wrapper">
     <div class="side-bar-index">
     <h2>Talk Room</h2>
         <ul class="talk-room">
@@ -9,18 +9,21 @@
           <%end%>
         </ul>
     </div>
+
     <div class="side-bar-index2">
-    <h2>日ごとのチャットを確認</h2>
+    <h2><%=Time.parse(@day_params).year%>年<%=Time.parse(@day_params).month%>月<%=Time.parse(@day_params).day%>日のチャット</h2>
       <%= month_calendar do |date| %>
         <%= link_to time_show_chat_path(@partner.id,date),class:"date-one" do %>
-          
-                <div><%= date.day %></div>
-
+          <% if Time.parse(@day_params).day == date.day%>
+            <div class="calender-one"><%= date.day %></div>
+          <% else %>
+            <div><%= date.day %></div>
+          <% end %>
         <% end %>
       <% end %>
 
         <ul class="side-login">
-
+         <li><%=link_to("全ての日を表示",chat_path(@partner.id), class:"side-login-one")%></li>
           <li><%=link_to("トップページ","/", class:"side-login-one")%></li>
           <li><%=link_to("ログアウト","/users/sign_out",method: :delete,class:"side-login-one" )%></li>
         </ul>
@@ -31,6 +34,8 @@
 
     <div id="chats">
       <% @chats.each do |chat|%>
+
+      <% if Time.parse(@day_params).day == chat.created_at.day %>
         <%if chat.user_id==current_user.id%>
           <div class="mycomment">
             <p><%=chat.sentence%></p>
@@ -47,6 +52,9 @@
             </div>
           </div>
         <%end%>
+      <% end %>
+      
+
       <%end%>
     </div>
 

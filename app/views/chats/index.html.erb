@@ -1,13 +1,40 @@
-<table class="rooms">
-  <tbody>
-    <tr>
-      <td>
-        <%@chat_partners.each do |chat_partner|%>
-          <%=link_to "#{chat_partner.nickname}さんとのトークルーム","/chats/#{chat_partner.id}"%>
-        <%end%>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<%=link_to("ログインページへ","/")%>
-<%=link_to("ログアウトする","/users/sign_out",method: :delete)%>
+ <div class="box-wrapper">
+    <div class="side-bar-index">
+    <h2>Talk Room</h2>
+
+       <%= form_with(url: search_chats_path, local: true, method: :get, class: "search-form") do |form| %>
+          <%= form.text_field :keyword, placeholder: "ユーザー検索", class: "input-box" %>
+          <button class="search-button">
+            <%= image_tag "search.png", class:"search-icon" %>
+          </button>
+        <% end %>
+
+        <ul class="talk-room">
+          <%@chat_partners.each do |chat_partner|%>
+           <%=link_to "/chats/#{chat_partner.id}" do%>
+           <p class="talk-room-one"><i class="fas fa-comments">　</i><%= "#{chat_partner.nickname}" %></p>
+           <% end %>
+          <%end%>
+        </ul>
+    </div>
+    <div class="side-bar-index2">
+    <h2>Chat Line</h2>
+        <ul class="side-text">
+          <li>Chat Lineは簡単シンプルなチャットアプリ</li>
+        </ul>
+
+        <ul class="side-login">
+          <!--<li><%=link_to("ログインページ","/", class:"side-login-one")%></li>-->
+          <li><%=link_to("ログアウト","/users/sign_out",method: :delete,class:"side-login-one" )%></li>
+        </ul>
+    </div>
+ 
+  <div class="container-index">
+    <h2>Chat Lineの使い方</h2>
+     <ul class="index-text">
+          <li>←Talk Roomから好きなユーザーを選んで<br>チャットをしてみよう！</li>
+          <%= image_tag("demo.png", class:"demo")%>
+          
+     </ul>
+  </div>
+</div>

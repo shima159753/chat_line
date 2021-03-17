@@ -13,6 +13,7 @@ const app = consumer.subscriptions.create("ChatChannel", {
     //画面を開いているのがチャット送信者だった場合
     if (data["isCurrent_user"]==true){
       $('#chats').append(`<div class='mycomment'><p>${data["sentence"]}</p></div>`);
+      $("#chats").scrollTop( $("#chats")[0].scrollHeight );
     }
     //画面を開いているのがチャット受信者だった場合
     else{
@@ -20,6 +21,7 @@ const app = consumer.subscriptions.create("ChatChannel", {
       <img src="/assets/images/user.png"></div>
       <div class='chatting'><div class='says'><p>${data["sentence"]}</p>
       </div></div></div>`);
+      $("#chats").scrollTop( $("#chats")[0].scrollHeight );
     }
   },
 
