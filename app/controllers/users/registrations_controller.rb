@@ -24,11 +24,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-   DELETE /resource
-   def destroy
-     super
-     flash[:notice] = '店舗情報を削除しました'
-   end
+  # DELETE /resource
+  # def destroy
+  #   super
+  # end
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
