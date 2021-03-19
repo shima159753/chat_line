@@ -19,6 +19,7 @@ class ChatChannel < ApplicationCable::Channel
       ChatChannel.broadcast_to data["current_user_id"].to_i,
         sentence: data["sentence"],
         partner_id: data["partner_id"],
+        chat_time: data["chat_time"],
         isCurrent_user: true
 
       #画面を開いているのがチャット受信者だった場合

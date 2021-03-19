@@ -1,0 +1,100 @@
+#messages{
+  padding: 20px 10px;
+  margin: 15px auto;
+  text-align: right;
+  font-size: 14px;
+  background: #7da4cd;
+  overflow: auto;
+  overflow-x: hidden;
+  height: 70vh;
+  width: 45vw;
+}
+
+.far send-box-room{
+  width: 25%;
+  font-size: 24px;
+  color: white;
+  border: 1px solid #ccc;
+  background: #2c7cff;
+}
+
+.room-btn{
+  display: flex;
+}
+
+#sending{
+  width: 12vw;
+  height: 7vh;
+}
+
+.side-bar-room{
+  background-color: rgb(209, 153, 79);
+  background-size: cover;
+  width: 40vw;
+  height: 50vh;
+  position: fixed;
+  margin-bottom: 50vh;
+  overflow: auto;
+}
+
+.side-bar-room h2{
+  text-align: center;
+  font-size: 2vw;
+  color: white;
+  margin-top: 2vh;
+}
+
+.side-bar-room-calendar{
+  background-color: rgb(168, 151, 129);
+  background-size: cover;
+  margin-top: 50vh;
+  width: 40vw;
+  height: 50vh;
+  position: fixed;
+  overflow: auto;
+}
+
+.side-bar-room-calendar h2{
+  text-align: center;
+  font-size: 2vw;
+  color: white;
+  margin-top: 2vh;
+}
+
+.side-bar-room2{
+  background-color: rgb(80, 22, 22);
+  background-size: cover;
+  margin-top: 50vh;
+  width: 40vw;
+  height: 50vh;
+  position: fixed;
+  overflow: auto;
+}
+
+.side-bar-room2 h2{
+  text-align: center;
+  font-size: 2vw;
+  color: white;
+  margin-top: 2vh;
+}
+
+.box-wrapper-room{
+  display: flex;
+  position: relative;
+  background-color: rgb(248, 225, 194);
+  height: 100vh;
+}
+
+.container-show-room {
+  margin-top: 2vh;
+  margin: 0 46.5vw;
+ } 
+
+ .container-show-room  h2{
+  margin-top: 2vh;
+  text-align: center;
+  padding: 0.5vh 0;
+  font-size: 2.5vw;
+  background-color: rgb(209, 153, 79);
+  color: white;
+ } 

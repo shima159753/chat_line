@@ -15,7 +15,9 @@
   tr {
     border-collapse: collapse;
     text-align: center;
-    background: #fafada;
+    background: #f8f8f8;
+    font-size: 1.7vw;
+    transition: all .2s ease-in-out;
   }
 
   th {
@@ -31,10 +33,12 @@
     color: white;
   }
 
+
   td {
     padding: 0.3vw;
     vertical-align: top;
     width: 14%;
+    font-size: 1.7vw;
 
     border: 1px solid #ddd;
     border-top-color: rgb(221, 221, 221);
@@ -64,7 +68,8 @@
   .wday-6 {}
 
   .today {
-    background: #fa8f03
+    background: #fa8f03;
+    transition: all .2s ease-in-out;
   }
 
   .past {}
@@ -88,9 +93,32 @@
 
 .calendar-title{
   font-size: 2vw;
-  color: rgb(87, 85, 85);
+  color: black;
 }
 
 .arror{
-  color: rgb(87, 85, 85);
+  color: black;
+  font-size: 1.5vw;
 }
+.arror:hover{
+  opacity: 40%;
+  transition: all .2s ease-in-out;
+}
+
+.calender-one{
+  background-color: #2c7cff;
+  color: white;
+}
+
+.calender-hover:hover{
+  background-color: #2c7cff;
+  color: white;
+  transition: all .2s ease-in-out;
+}
+
+.calender-one-hover:hover{
+  background-color: #2c7cff;
+  transition: all .2s ease-in-out;
+  color: white;
+}
+

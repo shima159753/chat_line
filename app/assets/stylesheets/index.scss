@@ -2,7 +2,7 @@
   background-color: rgb(80, 22, 22);
   background-size: cover;
   width: 40vw;
-  height: 100vh;
+  height: 50vh;
   position: fixed;
   margin-bottom: 50vh;
   overflow: auto;
@@ -11,17 +11,18 @@
 
 
 .side-bar-index2{
-  background-color: rgb(211, 129, 53);
+  background-color: rgb(209, 153, 79);
   background-size: cover;
   margin-top: 50vh;
   width: 40vw;
   height: 50vh;
   position: fixed;
+  overflow: auto;
 }
 
 .side-bar-index h2{
   text-align: center;
-  font-size: 3vw;
+  font-size: 2vw;
   color: white;
   margin-top: 2vh;
 }
@@ -37,12 +38,19 @@
   display: flex;
   justify-content:flex-start;
   padding: 1vw;
-
+  font-size: 2vw;
 }
 
 .side-login-one{
   color: white;
   margin-left: 2vw;
+  transition: all .2s ease-in-out;
+  font-size: 1.5vw;
+}
+
+.side-login-one:hover{
+  opacity: 60%;
+  transition: all .2s ease-in-out;
 }
 
 .talk-room{
@@ -63,7 +71,13 @@ background-color: rgb(245, 208, 140);
   padding-left: 2vw;
   color: rgb(87, 85, 85);
   background-color: rgb(248, 244, 244);
+  transition: all .2s ease-in-out;
   }
+
+  .talk-room-one:hover{
+  opacity: 50%;
+  transition: all .2s ease-in-out;
+    }
 
   
   .container-index {
@@ -78,8 +92,8 @@ background-color: rgb(245, 208, 140);
     align-items: center;
     color: white;
     width: 100%;
-    padding-left: 7vw;
-    padding-right: 7vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
     overflow-x: hidden;
   }
 
@@ -95,7 +109,6 @@ background-color: rgb(245, 208, 140);
   }
 
 .index-text li{
-background: rgb(235, 197, 115);
 border-radius : 10px;
 text-align: center;
 padding: 1vw;
@@ -138,4 +151,79 @@ margin-bottom: 5vh;
 
 .search-icon {
   width: 40%;
+}
+
+.side-text-roomenter{
+  padding: 3vw;
+  padding-top: 3vh;
+  padding-bottom: 1vh;
+  color: white;
+  font-size: 2vw;
+}
+
+.side-text-roomenter li{
+text-align: center;
+}
+
+.roomenter-btn{
+  background-color: rgb(91, 107, 248);
+  color: white;
+  margin-top: 3vh;
+  border-radius : 10px;
+  padding: 1.5vw;
+  transition: all .2s ease-in-out;
+}
+.roomenter-btn:hover{
+  background-color: white;
+  color: rgb(91, 107, 248);
+  transition: all .2s ease-in-out;
+}
+
+.index-help{
+  font-size: 4vw;
+}
+
+.index-help-chat{
+  background-color: rgb(80, 22, 22);
+  border-radius : 10px;
+  text-align: center;
+  padding: 1vw;
+  margin-bottom: 5vh;
+  color: white;
+}
+
+.index-help-chat2{
+  background-color: rgb(209, 153, 79);
+  border-radius : 10px;
+  text-align: center;
+  padding: 1vw;
+  margin-bottom: 5vh;
+  color: white;
+}
+
+.index-help2{
+  background-color: rgb(91, 107, 248);
+  display: block;
+  color: white;
+}
+
+.index-help-room{
+  font-size: 4vw;
+  padding-bottom: 3vh;
+}
+
+.roommake-btn{
+  background-color: rgb(91, 107, 248);
+  display: block;
+  color: white;
+  margin: 3vh;
+  padding: 3vh;
+  border-radius : 10px;
+  transition: all .2s ease-in-out;
+}
+
+.roommake-btn:hover{
+  color: rgb(91, 107, 248);
+  background-color: white;
+  transition: all .2s ease-in-out;
 }

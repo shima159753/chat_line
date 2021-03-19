@@ -8,4 +8,6 @@ class Chat < ApplicationRecord
       User.all
     end
   end
+
+  validates :sentence, presence: true
 end

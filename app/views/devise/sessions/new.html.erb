@@ -5,7 +5,7 @@
           <li>Chat Lineは簡単シンプルなチャットアプリ</li>
           <li>利用料無料!ユーザー登録をして今すぐ使ってみよう</li>
           <li class="alist"><%= link_to "新規登録はこちら", new_registration_path(resource_name),class:"sign-up-side" %></li>
-          <li class="alist"><%= link_to "パスワードをお忘れの方", new_password_path(resource_name),class:"sign-up-side" %></li>
+          <!--<li class="alist"><%= link_to "パスワードをお忘れの方", new_password_path(resource_name),class:"sign-up-side" %></li>-->
         </ul>
     </div>
 
@@ -16,6 +16,12 @@
 <h2>ログイン</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+     <div class="field-error">
+     <%= flash[:notice] %>
+      <%= flash[:alert] %>
+    </div>
+
+
   <div class="field">
     <%= f.label :メールアドレス, class:"form-text" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email",  class:"input-default" %>
@@ -34,7 +40,7 @@
   <% end %>-->
 
   <div class="actions">
-    <p class="log-in-btn"><%= f.submit "Log in",class:"sign-up-btn" %><p>
+    <p><%= f.submit "Log in",class:"sign-up-btn" %><p>
   </div>
 <% end %>
 

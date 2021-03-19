@@ -1,3 +1,34 @@
+.side-bar-index2-chat{
+  background-color: rgba(61, 13, 13, 0.432);
+  background-size: cover;
+  margin-top: 50vh;
+  width: 40vw;
+  height: 50vh;
+  position: fixed;
+  overflow: auto;
+}
+
+.side-bar-index2-chat h2{
+  text-align: center;
+  font-size: 2vw;
+  color: white;
+  margin-top: 2vh;
+}
+
+.container-show-title {
+  margin-top: 2vh;
+  margin: 0 46.5vw;
+ } 
+
+ .container-show-title  h2{
+  margin-top: 2vh;
+  text-align: center;
+  padding: 0.5vh 0;
+  font-size: 2.5vw;
+  background-color: rgb(80, 22, 22);
+  color: white;
+ } 
+
 .container-show {
  margin-top: 2vh;
  margin: 0 46.5vw;
@@ -34,16 +65,22 @@
   color: white;
   border: 1px solid #ccc;
   background: #2c7cff;
+  transition: all .2s ease-in-out;
+}
+
+.far:hover{
+  color: #2c7cff;
+  border: 1px solid #2c7cff;
+  background: white;
+  transition: all .2s ease-in-out;
 }
 
 .date-one{
   color: rgb(87, 85, 85);
 }
 
+
 .simple-calendar tr{
   
 }
 
-.calender-one{
-  background-color: rgb(120, 120, 247);
-}

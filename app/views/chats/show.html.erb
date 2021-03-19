@@ -1,6 +1,12 @@
  <div class="box-wrapper">
     <div class="side-bar-index">
-    <h2>Talk Room</h2>
+    <h2>Chat</h2>
+           <%= form_with(url: search_chats_path, local: true, method: :get, class: "search-form") do |form| %>
+          <%= form.text_field :keyword, placeholder: "ユーザー検索", class: "input-box" %>
+          <button class="search-button">
+            <%= image_tag "search.png", class:"search-icon" %>
+          </button>
+        <% end %>
         <ul class="talk-room">
           <%@chat_partners.each do |chat_partner|%>
            <%=link_to "/chats/#{chat_partner.id}" do%>
@@ -9,15 +15,15 @@
           <%end%>
         </ul>
     </div>
-    <div class="side-bar-index2">
+    <div class="side-bar-index2-chat">
     <h2>日ごとのチャットを確認</h2>
       <%= month_calendar do |date| %>
         <%= link_to time_show_chat_path(@partner.id,date),class:"date-one" do %>
           
-                <div><%= date.day %></div>
-
+                <div class="calender-hover"><%= date.day %></div>
         <% end %>
       <% end %>
+
 
         <ul class="side-login">
 
@@ -26,20 +32,24 @@
         </ul>
     </div>
 
-    <div class="container-show">
+    <div class="container-show-title">
     <h2><%="Chat With  #{@partner.nickname}"%></h2>
 
     <div id="chats">
+     <div id="chats-scroll">
       <% @chats.each do |chat|%>
         <%if chat.user_id==current_user.id%>
           <div class="mycomment">
             <p><%=chat.sentence%></p>
           </div>
+          <p class="mycomment-time"><%=chat.created_at.month%>/<%=chat.created_at.day%>　<%=chat.created_at.hour%>:<%= chat.created_at.strftime("%M") %><p>
         <%else%>
           <div class="fukidasi">
             <div class="faceicon">
               <%= image_tag("user.png", class:"img" )%>
+              <%=chat.created_at.month%>/<%=chat.created_at.day%>　<%=chat.created_at.hour%>:<%= chat.created_at.strftime("%M") %>
             </div>
+           
             <div class="chatting">
               <div class="says">
                 <p><%=chat.sentence%></p>
@@ -48,6 +58,7 @@
           </div>
         <%end%>
       <%end%>
+     </div>
     </div>
 
 
@@ -56,6 +67,7 @@
       <input type="submit" value="&#xf1d8;" id="send" class="far send-box">
       <input id="current_user_id" type="hidden" value= "<%=current_user.id%>">
       <input id="partner_id" type="hidden" value= "<%=@partner.id%>">
+      <input id="chat_time" type="hidden" value= "<%=Time.now.hour%>:<%=Time.now.strftime("%M")%>">
     </form>
   </div>
 </div>

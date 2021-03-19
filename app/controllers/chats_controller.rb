@@ -18,7 +18,6 @@ class ChatsController < ApplicationController
 
   def time_show
    @day_params = params[:format]
-
    @partner=User.find(params[:id])
    @chat_partners=User.where.not(id:current_user.id)
    @chats_by_myself=Chat.where(user_id: current_user.id,partner_id: @partner.id)
@@ -32,6 +31,12 @@ class ChatsController < ApplicationController
     @my_chats=current_user.chats
     @chat_partners=User.where.not(id:current_user.id)
   end
+
+  #def destroy
+   # current_user.destroy
+   # flash[:notice] = 'ユーザーアカウントを削除しました'
+   # redirect_to new_user_session_path
+ # end
 
   #def create
     #@chat = Chat.new(post_params)

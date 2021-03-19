@@ -32,18 +32,26 @@
 }
 .fukidasi {
   width: 100%;
-  margin: 10px 0;
+  margin: 5px 0;
   overflow: hidden;
 }
 .fukidasi .faceicon {
   float: left;
   margin-right: -50px;
   width: 5vw;
+  font-size: 1vw;
+}
+.fukidasi .faceicon-time {
+  float: left;
+  margin-right: -30px;
+  width: 10vw;
+  font-size: 1vw;
 }
 .fukidasi .faceicon img{
   width: 100%;
   height: auto;
   border-radius: 50%;
+  
 }
 .fukidasi .chatting {
   width: 100%;
@@ -53,10 +61,11 @@
   display: inline-block;
   position: relative;
   margin: 0 0 0 50px;
-  padding: 10px;
+  padding: 5px 10px 5px 10px ;
   max-width: 250px;
   border-radius: 12px;
   background: #edf1ee;
+  font-size: 1.4vw;
 }
 .says:after {
   content: "";
@@ -66,8 +75,8 @@
   left: -19px;
   border: 8px solid transparent;
   border-right: 18px solid #edf1ee;
-  -webkit-transform: rotate(35deg);
-  transform: rotate(35deg);
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
 }
 .says p {
   margin: 0;
@@ -75,6 +84,7 @@
 }
 .mycomment {
   margin: 10px 0;
+  
 }
 .mycomment p {
   display: inline-block;
@@ -84,7 +94,7 @@
   max-width: 250px;
   border-radius: 12px;
   background: #30e852;
-  font-size: 15px;
+  font-size: 1.4vw;
 }
 .mycomment p:after {
   content: "";
@@ -102,4 +112,8 @@
 #send-form{
   text-align:center;
   margin-bottom:200px;
+}
+
+.mycomment-time{
+  font-size: 1vw;
 }

@@ -1,0 +1,52 @@
+
+ <div class="box-wrapper">
+    <div class="side-bar-room">
+    <h2>Talk Room</h2>
+
+           <%= form_with(url: search_rooms_path, local: true, method: :get, class: "search-form") do |form| %>
+          <%= form.text_field :keyword, placeholder: "ルーム検索", class: "input-box" %>
+          <button class="search-button">
+            <%= image_tag "search.png", class:"search-icon" %>
+          </button>
+        <% end %>
+
+        <ul class="talk-room">
+          <% @rooms.each do |room| %>
+           <%=link_to room_path(room) do%>
+           <p class="talk-room-one"><i class="fas fa-comments">　</i><%= "#{room.name}" %></p>
+           <% end %>
+          <%end%>
+        </ul>
+    </div>
+    <div class="side-bar-room2">
+    <h2>Chat</h2>
+        <ul class="side-text-roomenter">
+          <li>1対1のチャットはこちらから</li>
+           <%=link_to root_path do%>
+           <li class="roomenter-btn">トップページへ</li>
+           <% end %>
+        </ul>
+        <ul class="side-login">
+          <!--<li><%=link_to("ログインページ","/", class:"side-login-one")%></li>-->
+          <li><%=link_to("ログアウト","/users/sign_out",method: :delete,class:"side-login-one" )%></li>
+        </ul>
+    </div>
+ 
+  <div class="container-new">
+    <h2>Talk Roomの作成</h2>
+     <ul class="new-text">
+          <li> <%= form_with(model:@room, local: true) do |f| %>
+
+      <div class="new-field">
+        <%= f.label :ルーム名入力, class:"form-text-new"%><br />
+        <%= f.text_field :name, autofocus: true, autocomplete: "nickname",  class:"input-new", placeholder:"10文字以内" %>
+      </div>
+
+      <div class="sign-up">
+        <%= f.submit "トークルーム作成",class:"make-btn" %>
+      </div>
+    <% end %></li>
+          
+     </ul>
+  </div>
+</div>

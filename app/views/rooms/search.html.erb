@@ -1,0 +1,13 @@
+  <div class="side-bar-search">
+    <h2>Search Result</h2>
+
+        <ul class="talk-room-search">
+          <%@talk_room.each do |talk_room|%>
+              <%if  @rooms.ids.include?(talk_room.id) %>
+                <%=link_to "/rooms/#{talk_room.id}" do%>
+                <li class="talk-room-search-one"><i class="fas fa-comments">　</i><%= "#{talk_room.name}" %></li>
+              <% end %>
+            <% end %>
+          <%end%>
+        </ul>
+    </div>

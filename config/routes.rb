@@ -10,4 +10,10 @@ Rails.application.routes.draw do
     end
   end
   root to: "chats#index"
+  resources :rooms do
+    get "time_show", on: :member
+    collection do
+      get 'search'
+    end
+  end
 end

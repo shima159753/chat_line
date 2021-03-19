@@ -42,15 +42,25 @@ padding: 3vw;
 
 .sign-up-side{
   color: white;
+  background-color: rgb(91, 107, 248);
+  padding: 2vw;
+  transition: all .2s ease-in-out;
+}
+
+.sign-up-side:hover{
+  color: rgb(91, 107, 248);
+  background-color: white;
+  transition: all .2s ease-in-out;
 }
 
 
 
 
 .container {
-  height: 110vh;
+  height: 140%;
   /*box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);*/
   background-color: rgb(91, 107, 248);
+  background-size: cover;
   box-sizing: border-box;
   width: 70vw;
   padding: 8vh 0;
@@ -84,28 +94,45 @@ padding: 3vw;
 
 .sign-up-btn {
   width: 100%;
-  background: #2c7cff;
+  background: #fff;
   border: 1px solid #2c7cff;
-  color: #fff;
+  color: #2c7cff;
   line-height: 48px;
   font-size:2vw;
   cursor: pointer;
   border-radius : 10px;
   text-decoration: none;
-  /*transition: all .2s ease-in-out;*/
+  margin-left: 1.5vw;
+  transition: all .2s ease-in-out;
+  
+}
+
+.sign-up-btn:hover {
+
+  background: #2c7cff;
+  border: 1px solid #2c7cff;
+  color: #fff;
+
+  transition: all .2s ease-in-out;
 }
 
 .log-in-btn{
   width: 100%;
-  background: #2c7cff;
+  background: #fff;
   border: 1px solid #2c7cff;
-  color: #fff;
+  color: #2c7cff;
   line-height: 48px;
   font-size: 2vw;
   cursor: pointer;
   border-radius : 10px;
   text-align: center;
   padding: 5px 16px 8px;
+}
+
+.log-in-btn{
+  background: #2c7cff;
+  border: 1px solid #2c7cff;
+  color: #fff;
 }
 
 .input-default {
@@ -156,4 +183,34 @@ padding: 3vw;
   border-radius : 10px;
   text-align: center;
   padding: 5px 16px 8px;
+}
+
+.field-error {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 10px;
+  position: relative;
+  font-size: 1.5vw;
+}
+
+.field-error h2{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 10px;
+  position: relative;
+  font-size: 1.5vw;
+}
+
+.field-error-session{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 10px;
+  position: relative;
+  font-size: 1.5vw;
 }

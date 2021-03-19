@@ -12,13 +12,13 @@ const app = consumer.subscriptions.create("ChatChannel", {
   received: function(data) {
     //画面を開いているのがチャット送信者だった場合
     if (data["isCurrent_user"]==true){
-      $('#chats').append(`<div class='mycomment'><p>${data["sentence"]}</p></div>`);
+      $('#chats').append(`<div class='mycomment'><p>${data["sentence"]}</p></div><p>${data["chat_time"]}</p>`);
       $("#chats").scrollTop( $("#chats")[0].scrollHeight );
     }
     //画面を開いているのがチャット受信者だった場合
     else{
       $('#chats').append(`<div class='fukidasi'> <div class="faceicon">
-      <img src="/assets/images/user.png"></div>
+      <img src="/assets/images/user.png"><p>${data["chat_time"]}</p></div>
       <div class='chatting'><div class='says'><p>${data["sentence"]}</p>
       </div></div></div>`);
       $("#chats").scrollTop( $("#chats")[0].scrollHeight );
@@ -28,7 +28,8 @@ const app = consumer.subscriptions.create("ChatChannel", {
   speak: function(sentence) {
     let current_user_id=$("#current_user_id").val();
     let partner_id=$("#partner_id").val();
-    return this.perform('speak',{sentence: sentence, current_user_id: current_user_id, partner_id: partner_id});
+    let chat_time=$("#chat_time").val();
+    return this.perform('speak',{sentence: sentence, current_user_id: current_user_id, partner_id: partner_id, chat_time: chat_time});
   }
 });
 
